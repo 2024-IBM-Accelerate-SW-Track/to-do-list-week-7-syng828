@@ -25,8 +25,10 @@ if (useCloudant)
     //initDB();
 }
 
-
-app.use(cors());
+app.use(cors({
+  credentials: true,
+  origin: 'http://localhost:3000'
+}));
 app.use(bodyParser.json({ extended: true }));
 
 app.listen(port, () => console.log("Backend server live on " + port));
@@ -188,8 +190,3 @@ async function initDB ()
 
   }
 };
-
-app.use(cors({
-  credentials: true,
-  origin: 'http://localhost:3000'
-}));

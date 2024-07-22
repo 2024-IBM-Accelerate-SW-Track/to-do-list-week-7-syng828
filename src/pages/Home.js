@@ -48,7 +48,7 @@ class Home extends Component {
 
     Axios({
       method: "POST",
-      url: "http://localhost:8080/items",
+      url: "http://localhost:8080/add/item",
       data: {jsonObject},
       headers: {
         "Content-Type": "application/json"
