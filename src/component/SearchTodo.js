@@ -22,10 +22,11 @@ class SearchTodo extends Component {
     // HTTP Client to send a GET request
     Axios({
       method: "GET",
-      url: "http://localhost:8080/items/search",
+      url: "http://localhost:8080/get/searchitem",
       headers: {
         "Content-Type": "application/json" 
       },
+      withCredentials: true,
       params: {
         taskname: this.state.content
       }
